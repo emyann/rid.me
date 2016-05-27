@@ -1,0 +1,4 @@
+<form (ngSubmit)="onSubmit()" #appTaskForm="ngForm">
+  <md-input placeholder="Title of the task" [(ngModel)]="task.title"></md-input>
+   <button type="submit" md-raised-button>Dump it!</button>
+</form>

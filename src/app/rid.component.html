@@ -1,3 +1,20 @@
 <h1>
   {{title}}
 </h1>
+
+<a [routerLink]="['home']">Home</a>
+
+<section>
+  <h2>Summary</h2>
+  <md-card>
+   <md-card-title-group>
+      <img md-card-sm-image src="http://dummyimage.com/80x80/b4d4ss/000&text=1"/>
+      <md-card-title>Number of current tasks</md-card-title>
+      <md-card-subtitle>if you are under <strong>25 current tasks</strong>, you can consider you are in control...</md-card-subtitle>
+   </md-card-title-group>
+</md-card>
+</section>
+
+
+
+<router-outlet></router-outlet>

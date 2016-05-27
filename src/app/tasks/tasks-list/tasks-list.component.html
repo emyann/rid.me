@@ -1,0 +1,29 @@
+<md-list dense>
+  <md-list-item *ngFor="let task of tasks |async; let i = index">
+    <h3 md-line> 
+      {{i+1}} - {{task.title}}   
+    </h3>
+    <div md-line> Status: {{task.status}}  </div>
+      <button (click)="completeTask(task)" md-raised-button>complete</button>
+      <button (click)="removeTask(task)" md-raised-button>remove</button>
+  </md-list-item>
+</md-list>
+
+<!--> Completed Tasks</!-->
+<section>
+  <div>
+    <h4>Completed tasks</h4> <button (click)="openCompletedTasks = !openCompletedTasks"> {{openCompletedTasks ? 'Collapse':'Expand'}}</button>
+  </div>
+  <div class="completed-tasks" [hidden]="!openCompletedTasks">
+    <md-list dense>
+      <md-list-item *ngFor="let task of completedTasks |async; let i = index">
+        <h3 md-line> 
+          {{i+1}} - {{task.title}}   
+        </h3>
+          <button (click)="restoreTask(task)" md-raised-button>restore</button>
+          <button (click)="removeTask(task)" md-raised-button>remove</button>
+      </md-list-item>
+    </md-list>
+  </div>
+  
+</section>

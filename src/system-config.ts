@@ -2,11 +2,33 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-const map: any = {
+const map: any = {  
+    'firebase': 'vendor/firebase/lib/firebase-web.js',
+    'angularfire2': 'vendor/angularfire2',
+    '@angular2-material': 'vendor/@angular2-material',
+    'lodash': 'vendor/lodash/lodash.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angularfire2': {
+    main: 'angularfire2.js'
+  },
+  '@angular2-material/core': {
+    main: 'core.js'
+  },
+  '@angular2-material/list': {
+    main: 'list.js'
+  },
+  '@angular2-material/button': {
+    main: 'button.js'
+  },
+  '@angular2-material/input': {
+    main: 'input.js'
+  },
+  '@angular2-material/card': {
+    main: 'card.js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,6 +51,12 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/test',
+  'app/+home',
+  'app/tasks',
+  'app/tasks/task-form',
+  'app/tasks/task-list',
+  'app/tasks/tasks-list',
   /** @cli-barrel */
 ];
 
